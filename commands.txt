@@ -1,0 +1,8 @@
+gcloud pubsub topics create DailyUsageCheckTopic
+
+gcloud scheduler jobs create pubsub DailyUsageCheckJob --schedule "0 0 * * *" --topic=DailyUsageCheckTopic --message-body="Perform Daily Check"
+
+gcloud functions deploy DailyUsageCheckFunction --runtime nodejs8 --source . --env-vars-file env.yaml --trigger-topic=DailyUsageCheckTopic
+
+gcloud pubsub topics publish DailyUsageCheckTopic --message "Perform Daily Check"
+
