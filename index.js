@@ -114,7 +114,7 @@ async function sendEmail(projectName, average, today, difference) {
       const msg = {
         to: toEmail,
         from: fromEmail,
-        subject: 'Billboard Alert',
+        subject: 'Billing Alert',
         text: 'Dear User, \n You daily usage for project: ' + projectName + ' is ' + today + ' which is ' + difference + '% more than the daily average of ' + average    
       };
 
