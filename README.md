@@ -5,6 +5,8 @@ A short function to be used by google cloud platform users. This helps set up a 
 
 This is a cloud function written in node.js to be used by Google Cloud Platform users. The cloud function is designed to run daily. When it runs it fetches billing data from BigQuery, calculates the daily average over a period on "n". It also get the billing data for the last 24 hours and sends an email notification to configured email ids in case the usage for the last 24 hours goes beyond "p" percent.
 
+*Note:* Currently this considers only the cost and not the discounts or credits.
+
 #### Prerequisites
 
 1. Billing Exports must be set to BigQuery.
