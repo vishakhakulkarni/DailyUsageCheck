@@ -31,9 +31,9 @@ For the function to work the following steps need to be taken:
 2. Create a scheduler to run daily at midnight and publish a message to the above topic
 3. Deploy the function to listen on the above topic.
 
-The gcloud commands to perform the above steps are provided in commands.txt.
+The gcloud commands to perform the above steps are provided in **commands.txt**
 
-Before deploying, please update the env.yaml and provide following details:
+Before deploying, please update the **env.yaml** and provide following details:
 
 1. DATASET : This is the full table name where the billing data is exported. This should be provided in legacy SQL format i.e. [projectname:datasetname.tablename] e.g. [bigquery-samples:airline_ontime_data.flights]
 2. PERCENT: If the daily usage value goes above this provided percent, an email will be sent.
